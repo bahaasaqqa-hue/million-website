@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#071b18">
-  <meta name="description" content="مليون — شريك إبداعي يحوّل الأفكار الطموحة إلى تجارب رقمية تصنع أثرًا.">
-  <title>مليون | من فكرة إلى مليون فرصة</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Million — أنشئ وأدر شركاتك ومتاجرك بالذكاء الاصطناعي من مكان واحد.">
+  <title>Million | شركتك تعمل بالذكاء الاصطناعي</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -16,172 +16,161 @@
   <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
 
   <header class="site-header" data-header>
-    <div class="container header-inner">
-      <a class="brand" href="#hero" aria-label="مليون — الصفحة الرئيسية">
-        <span class="brand-mark" aria-hidden="true">M</span>
-        <span class="brand-name">MILLION</span>
+    <div class="container nav-wrap">
+      <a class="brand" href="#hero" aria-label="Million — الصفحة الرئيسية">
+        <span class="brand-dot blue"></span><span class="brand-dot red"></span><span class="brand-dot yellow"></span><span class="brand-dot green"></span>
+        <strong>MILLION</strong>
       </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
-        <span></span><span></span>
-      </button>
-
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة"><span></span><span></span></button>
       <nav id="site-nav" class="site-nav" aria-label="التنقل الرئيسي">
-        <a href="#hero">الرئيسية</a>
-        <a href="#services">ماذا نقدم</a>
-        <a href="#process">كيف نعمل</a>
-        <a href="#projects">أعمالنا</a>
+        <a href="#services">الإمكانات</a>
+        <a href="#process">كيف يعمل؟</a>
+        <a href="#projects">مساحة العمل</a>
+        <a href="#contact">عن Million</a>
       </nav>
-
-      <a class="button button-small header-cta" href="#contact">ابدأ مشروعك <span aria-hidden="true">↙</span></a>
+      <div class="nav-actions">
+        <a class="login" href="#contact">تسجيل الدخول</a>
+        <a class="button small" href="#hero">ابدأ الآن</a>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <section id="hero" class="hero">
-      <div class="hero-glow glow-one"></div>
-      <div class="hero-glow glow-two"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <span class="eyebrow"><i></i> نصنع الأفكار التي تستحق أن تُرى</span>
-          <h1>من فكرة واحدة<br>إلى <em>مليون</em> فرصة.</h1>
-          <p>نحوّل الرؤية الطموحة إلى علامة وتجربة رقمية تنمو بثقة، وتترك أثرًا لا يُنسى.</p>
-          <div class="hero-actions">
-            <a class="button" href="#contact">لنصنع شيئًا عظيمًا <span aria-hidden="true">↙</span></a>
-            <a class="text-link" href="#projects">شاهد أعمالنا <span aria-hidden="true">←</span></a>
+      <div class="hero-orb orb-blue"></div><div class="hero-orb orb-red"></div>
+      <div class="container hero-inner">
+        <div class="ai-badge"><span class="spark">✦</span> نظام تشغيل الأعمال بالذكاء الاصطناعي <b>جديد</b></div>
+        <h1>فكرة واحدة.<br><span class="color-word">شركات</span> بلا حدود.</h1>
+        <p class="hero-lead">أنشئ شركتك ومتجرك، ثم دع وكلاء Million يديرون التشغيل والتسويق والمبيعات. أنت شخص واحد، لكنك تملك فريقًا كاملًا من الذكاء الاصطناعي.</p>
+
+        <form id="ai-search" class="ai-search" aria-label="ابدأ فكرتك مع Million">
+          <textarea name="prompt" rows="1" aria-label="اكتب فكرة الشركة أو المتجر" placeholder="ماذا تريد أن تبني اليوم؟"></textarea>
+          <div class="search-tools">
+            <button class="tool-button" type="button" aria-label="إرفاق ملف">＋</button>
+            <span>Million AI</span>
+            <button class="send-button" type="submit" aria-label="إرسال الفكرة">↑</button>
           </div>
-          <div class="hero-proof" aria-label="قيمنا">
-            <span>استراتيجية</span><b>•</b><span>إبداع</span><b>•</b><span>تقنية</span>
-          </div>
+        </form>
+
+        <div class="suggestions" aria-label="أفكار مقترحة">
+          <span>جرّب مثلًا:</span>
+          <button type="button" data-suggestion="أنشئ لي متجر عطور فاخر يستهدف السوق السعودي">متجر عطور فاخر</button>
+          <button type="button" data-suggestion="ابنِ شركة خدمات رقمية كاملة بالذكاء الاصطناعي">شركة خدمات رقمية</button>
+          <button type="button" data-suggestion="أطلق علامة قهوة مختصة وأدر مبيعاتها">علامة قهوة مختصة</button>
         </div>
 
-        <div class="hero-art reveal" aria-label="تكوين بصري يمثل النمو والفرص">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="million-sphere">
-            <span class="sphere-line line-one"></span>
-            <span class="sphere-line line-two"></span>
-            <strong>1M</strong>
-            <small>IDEAS<br>IN MOTION</small>
-          </div>
-          <div class="float-card card-top"><span>+96%</span><small>وضوح في الرؤية</small></div>
-          <div class="float-card card-bottom"><span>∞</span><small>إمكانات بلا حدود</small></div>
-          <div class="spark spark-one">✦</div>
-          <div class="spark spark-two">✦</div>
-        </div>
-      </div>
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>نبني علامات أقوى</span><i>✦</i><span>نصمم تجارب أذكى</span><i>✦</i><span>نطلق أفكارًا أكبر</span><i>✦</i>
-          <span>نبني علامات أقوى</span><i>✦</i><span>نصمم تجارب أذكى</span><i>✦</i><span>نطلق أفكارًا أكبر</span><i>✦</i>
+        <div class="hero-trust">
+          <span class="avatars"><i>M</i><i>AI</i><i>+</i></span>
+          <p>من الفكرة إلى أول عميل<br><strong>كل شيء في مكان واحد</strong></p>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section services">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="eyebrow dark"><i></i> ما نصنعه</span>
-            <h2>كل ما تحتاجه فكرتك<br><em>لتصبح حقيقة.</em></h2>
-          </div>
-          <p>نعمل معك من أول سؤال حتى لحظة الإطلاق، بمنهج يجمع التفكير الجريء والتنفيذ الدقيق.</p>
-        </div>
+    <section class="statement">
+      <div class="container statement-inner reveal">
+        <span>الجيل الجديد من ريادة الأعمال</span>
+        <h2>لم تعد بحاجة إلى فريق كبير<br>لتبني <em>شيئًا كبيرًا.</em></h2>
+        <p>Million ليست مجرد أداة لإنشاء متجر. إنها شريك AI يفهم فكرتك، يبني الشركة، ويعمل معك كل يوم.</p>
+      </div>
+    </section>
 
-        <div class="service-grid">
-          <article class="service-card feature-card reveal">
-            <span class="number">01</span>
-            <div class="service-icon">⌁</div>
-            <h3>الاستراتيجية والهوية</h3>
-            <p>نحدد موقعك، صوتك، وشكلك لنصنع علامة واضحة ومتماسكة تعرف إلى أين تتجه.</p>
-            <span class="card-link">اكتشف الخدمة <b>↙</b></span>
+    <section id="services" class="section capabilities">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">كل ما تحتاجه. تلقائيًا.</span>
+          <h2>فريق شركتك الجديد<br><span>يعمل بالـ AI.</span></h2>
+        </div>
+        <div class="cap-grid">
+          <article class="cap-card card-blue reveal">
+            <div class="cap-icon">✦</div><span class="step-num">01</span>
+            <h3>من الفكرة إلى شركة</h3>
+            <p>صف فكرتك بكلمات بسيطة. Million يحوّلها إلى نموذج عمل، اسم، هوية، وخطة إطلاق.</p>
+            <div class="mini-window"><b>خطة الإطلاق جاهزة</b><span><i></i> دراسة السوق</span><span><i></i> الهوية البصرية</span><span><i></i> خطة الـ90 يومًا</span></div>
           </article>
-          <article class="service-card reveal">
-            <span class="number">02</span>
-            <div class="service-icon">◫</div>
-            <h3>التجارب الرقمية</h3>
-            <p>مواقع ومنتجات رقمية سريعة، بسيطة، ومصممة لتحويل الاهتمام إلى فعل.</p>
-            <span class="card-link">اكتشف الخدمة <b>↙</b></span>
+          <article class="cap-card card-red reveal">
+            <div class="cap-icon">▣</div><span class="step-num">02</span>
+            <h3>متجر يولد في دقائق</h3>
+            <p>منتجات، صور، وصف، أسعار، صفحات ودفع. أنشئ متجرًا جاهزًا للبيع من محادثة واحدة.</p>
+            <div class="store-preview"><div class="store-bar"></div><div class="store-product"></div><div><b>منتجك الأول</b><small>جاهز للبيع</small></div></div>
           </article>
-          <article class="service-card reveal">
-            <span class="number">03</span>
-            <div class="service-icon">✦</div>
-            <h3>المحتوى والحملات</h3>
-            <p>قصص وحملات تلفت الانتباه، تبني الثقة، وتمنح علامتك حضورًا مستمرًا.</p>
-            <span class="card-link">اكتشف الخدمة <b>↙</b></span>
+          <article class="cap-card card-yellow reveal">
+            <div class="cap-icon">◎</div><span class="step-num">03</span>
+            <h3>وكلاء يديرون العمل</h3>
+            <p>وكلاء متخصصون للتسويق وخدمة العملاء والمحتوى والعمليات، يعملون معًا على مدار الساعة.</p>
+            <div class="agents"><span><i class="a-blue">M</i>وكيل التسويق <b>يعمل الآن</b></span><span><i class="a-red">S</i>وكيل المبيعات <b>3 فرص</b></span><span><i class="a-green">C</i>خدمة العملاء <b>تم الرد</b></span></div>
+          </article>
+          <article class="cap-card card-green reveal">
+            <div class="cap-icon">⌘</div><span class="step-num">04</span>
+            <h3>كل شركاتك في مساحة واحدة</h3>
+            <p>راقب متاجرك وشركاتك، وافهم أداءها، واتخذ القرار من لوحة واحدة مهما زاد عددها.</p>
+            <div class="company-list"><span><i>ع</i><b>علامة العطور</b><em>نشطة</em></span><span><i>ق</i><b>متجر القهوة</b><em>نشط</em></span><span><i>+</i><b>شركة جديدة</b></span></div>
           </article>
         </div>
       </div>
     </section>
 
     <section id="process" class="section process">
-      <div class="container process-grid">
-        <div class="process-intro reveal">
-          <span class="eyebrow"><i></i> طريقتنا</span>
-          <h2>بسيطة.<br>واضحة.<br><em>فعّالة.</em></h2>
-          <p>لا تعقيد ولا ضوضاء. خطوات محسوبة تقرّب فكرتك من النتيجة التي تستحقها.</p>
-        </div>
-        <ol class="steps">
-          <li class="reveal"><span>01</span><div><h3>نكتشف</h3><p>نستمع، نسأل، ونفهم الصورة كاملة.</p></div></li>
-          <li class="reveal"><span>02</span><div><h3>نصمّم</h3><p>نحوّل الرؤية إلى نظام بصري وتجربة واضحة.</p></div></li>
-          <li class="reveal"><span>03</span><div><h3>نبني</h3><p>ننقل التصميم إلى منتج سريع ومتقن.</p></div></li>
-          <li class="reveal"><span>04</span><div><h3>ننطلق</h3><p>نختبر، نطلق، ونستمر في التحسين.</p></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="eyebrow dark"><i></i> مختارات</span>
-            <h2>أفكار أخذت<br><em>مكانها في العالم.</em></h2>
-          </div>
-          <a class="text-link dark-link" href="#contact">لديك الفكرة التالية؟ <span>←</span></a>
+        <div class="section-head center reveal">
+          <span class="kicker">كيف يعمل Million؟</span>
+          <h2>تكلم. شاهد. <span>انطلق.</span></h2>
+          <p>لا قوالب معقدة ولا عشرات الإعدادات. ابدأ بما تعرفه: فكرتك.</p>
         </div>
-        <div class="project-grid">
-          <article class="project-card project-one reveal">
-            <div class="project-visual">
-              <div class="project-orb">M</div>
-              <span class="project-tag">هوية رقمية</span>
-            </div>
-            <div class="project-meta"><div><h3>هوية تبدأ من المستقبل</h3><p>استراتيجية • هوية • تجربة</p></div><span>↙</span></div>
-          </article>
-          <article class="project-card project-two reveal">
-            <div class="project-visual">
-              <div class="phone"><span></span><strong>01</strong><small>MAKE IT<br>MATTER.</small></div>
-              <span class="project-tag">منتج رقمي</span>
-            </div>
-            <div class="project-meta"><div><h3>تجربة تختصر الطريق</h3><p>تصميم تجربة • تطوير</p></div><span>↙</span></div>
-          </article>
+        <div class="flow">
+          <article class="flow-step reveal"><span class="flow-number blue-bg">1</span><h3>احكِ فكرتك</h3><p>اكتب ماذا تريد أن تبيع ولمن، أو تحدث مع Million بصوتك.</p></article>
+          <i class="flow-arrow">←</i>
+          <article class="flow-step reveal"><span class="flow-number red-bg">2</span><h3>راجع ما بناه</h3><p>شاهد الخطة والهوية والمتجر، وعدّل أي شيء بالمحادثة.</p></article>
+          <i class="flow-arrow">←</i>
+          <article class="flow-step reveal"><span class="flow-number green-bg">3</span><h3>ابدأ واتركه يعمل</h3><p>أطلق شركتك، وعيّن الوكلاء، وتابع كل شيء من لوحة واحدة.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="container contact-inner reveal">
-        <div>
-          <span class="eyebrow"><i></i> الخطوة الأولى</span>
-          <h2>فكرتك قد تكون<br><em>المليون القادمة.</em></h2>
+    <section id="projects" class="section workspace-section">
+      <div class="container workspace-grid">
+        <div class="workspace-copy reveal">
+          <span class="kicker">Million Workspace</span>
+          <h2>أنت المالك.<br><span>وهم فريقك.</span></h2>
+          <p>بدل التنقل بين أدوات وحسابات مختلفة، تحصل على مركز قيادة واحد لكل أعمالك. اسأل عن الأداء، وافق على المهام، واترك التنفيذ لوكلائك.</p>
+          <ul><li><i>✓</i>ملخص يومي لكل شركة</li><li><i>✓</i>تنبيهات وقرارات تحتاج موافقتك</li><li><i>✓</i>ذاكرة موحدة تعرف أعمالك وعملاءك</li></ul>
+          <a class="text-link" href="#contact">اكتشف مساحة العمل <span>←</span></a>
         </div>
-        <a class="contact-button" href="mailto:hello@million.sa" aria-label="راسل مليون عبر البريد">
-          <span>تحدّث معنا</span><b>↙</b>
-        </a>
+        <div class="dashboard reveal">
+          <div class="dash-sidebar">
+            <div class="dash-brand">M</div><span class="active">⌂</span><span>✦</span><span>▦</span><span>◉</span><span>⚙</span>
+          </div>
+          <div class="dash-main">
+            <div class="dash-top"><div><small>مساء الخير 👋</small><h3>كل شركاتك بخير.</h3></div><button>＋ شركة جديدة</button></div>
+            <div class="dash-stats"><div><span>إجمالي المبيعات</span><b>284,920 ر.س</b><em>↑ 18.4%</em></div><div><span>مهام نفذها الوكلاء</span><b>1,248</b><em>هذا الشهر</em></div></div>
+            <div class="dash-row">
+              <div class="chart"><span>نمو الأعمال</span><svg viewBox="0 0 300 100" role="img" aria-label="رسم نمو الأعمال"><path d="M0 88 C40 75 50 84 85 58 S140 62 165 38 S220 55 300 5" fill="none" stroke="#4285f4" stroke-width="4"/><path d="M0 88 C40 75 50 84 85 58 S140 62 165 38 S220 55 300 5 V100 H0Z" fill="url(#fade)"/><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4285f4" stop-opacity=".18"/><stop offset="1" stop-color="#4285f4" stop-opacity="0"/></linearGradient></defs></svg></div>
+              <div class="activity"><span>نشاط الوكلاء</span><p><i class="a-blue">M</i><b>نشر حملة جديدة</b><small>الآن</small></p><p><i class="a-green">C</i><b>رد على 12 عميلًا</b><small>قبل 8 د</small></p><p><i class="a-red">S</i><b>حدّث فرص البيع</b><small>قبل 20 د</small></p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section final-cta">
+      <div class="container cta-box reveal">
+        <div class="cta-stars"><i class="blue-bg"></i><i class="red-bg"></i><i class="yellow-bg"></i><i class="green-bg"></i></div>
+        <span class="kicker">جاهز لفكرتك الأولى؟</span>
+        <h2>ابنِ شركتك القادمة<br>مع <span>Million.</span></h2>
+        <p>سجّل اهتمامك وكن من أوائل المؤسسين الذين يديرون أعمالهم بالذكاء الاصطناعي.</p>
+        <a class="button" href="mailto:hello@million.sa">انضم إلى قائمة الانتظار <span>←</span></a>
+        <small>الدخول المبكر سيكون على دفعات محدودة.</small>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-main">
-      <a class="brand footer-brand" href="#hero"><span class="brand-mark">M</span><span class="brand-name">MILLION</span></a>
-      <p>نصنع الأفكار التي تستحق أن تُرى.</p>
-      <div class="socials" aria-label="روابط التواصل">
-        <a href="#" aria-label="إنستغرام">IG</a>
-        <a href="#" aria-label="لينكدإن">IN</a>
-        <a href="mailto:hello@million.sa" aria-label="البريد الإلكتروني">EM</a>
-      </div>
+    <div class="container footer-grid">
+      <a class="brand" href="#hero"><span class="brand-dot blue"></span><span class="brand-dot red"></span><span class="brand-dot yellow"></span><span class="brand-dot green"></span><strong>MILLION</strong></a>
+      <p>نظام تشغيل الأعمال بالذكاء الاصطناعي.</p>
+      <div><a href="#services">الإمكانات</a><a href="#process">كيف يعمل؟</a><a href="#contact">تواصل معنا</a></div>
     </div>
-    <div class="container footer-bottom"><span>© <span data-year></span> MILLION</span><span>صُنع بشغف في السعودية</span></div>
+    <div class="container footer-bottom"><span>© <span data-year></span> Million</span><span>صُمّم للمؤسسين في العالم العربي</span></div>
   </footer>
+  <div class="toast" role="status" aria-live="polite" data-toast>تم حفظ فكرتك للعرض التجريبي ✦</div>
 </body>
 </html>
