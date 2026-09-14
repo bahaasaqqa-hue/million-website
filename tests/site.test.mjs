@@ -13,37 +13,53 @@ test("homepage is Arabic RTL and responsive", async () => {
   assert.match(html, /<main/i);
 });
 
-test("hero makes the AI multi-company promise clear", async () => {
+test("hero states the AI multi-company promise directly", async () => {
   const html = await readFile(htmlPath, "utf8");
-  assert.match(html, /الذكاء الاصطناعي/);
-  assert.match(html, /شركاتك|شركات/);
-  assert.match(html, /متاجر/);
+  assert.match(html, /أنشئ وأدر شركاتك ومتاجرك/);
+  assert.match(html, /بالذكاء الاصطناعي/);
   assert.match(html, /شخص واحد/);
 });
 
-test("hero includes an accessible AI command search", async () => {
+test("hero provides an accessible AI command experience", async () => {
   const html = await readFile(htmlPath, "utf8");
+  const js = await readFile(jsPath, "utf8");
   assert.match(html, /<form[^>]*id="ai-search"/i);
   assert.match(html, /<textarea[^>]*name="prompt"/i);
-  assert.match(html, /aria-label=/);
   assert.match(html, /data-suggestion=/);
+  assert.match(html, /id="ai-result"/i);
+  assert.match(html, /aria-live="polite"/i);
+  assert.match(js, /requestSubmit/);
+  assert.match(js, /runDemo/);
 });
 
-test("homepage contains the product story and conversion sections", async () => {
+test("homepage explains commerce operations and AI agents", async () => {
   const html = await readFile(htmlPath, "utf8");
-  for (const id of ["hero", "services", "process", "projects", "contact"]) {
+  for (const term of ["الدفع", "الشحن", "المخزون", "التسويق", "خدمة العملاء", "وكلاء"]) {
+    assert.match(html, new RegExp(term), `missing capability: ${term}`);
+  }
+});
+
+test("homepage contrasts Million with traditional store platforms", async () => {
+  const html = await readFile(htmlPath, "utf8");
+  assert.match(html, /id="difference"/i);
+  assert.match(html, /منصة متجر تقليدية/);
+  assert.match(html, /نظام تشغيل أعمال/);
+});
+
+test("homepage contains the full product story", async () => {
+  const html = await readFile(htmlPath, "utf8");
+  for (const id of ["hero", "services", "process", "projects", "difference", "contact"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`), `missing section #${id}`);
   }
   assert.match(html, /href=["']#contact["']/);
 });
 
-test("navigation and AI prompt are keyboard friendly", async () => {
+test("navigation is keyboard friendly", async () => {
   const html = await readFile(htmlPath, "utf8");
   const js = await readFile(jsPath, "utf8");
   assert.match(html, /aria-expanded="false"/);
   assert.match(js, /aria-expanded/);
   assert.match(js, /Escape/);
-  assert.match(js, /requestSubmit/);
 });
 
 test("styles include responsive and reduced-motion behavior", async () => {
