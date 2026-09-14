@@ -90,3 +90,41 @@ const observer = "IntersectionObserver" in window ? new IntersectionObserver((en
 }, { threshold: 0.1 }) : null;
 document.querySelectorAll(".reveal").forEach((element) => observer ? observer.observe(element) : element.classList.add("visible"));
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+// Million coin branding: use the new coin as the visible brand icon and browser icon.
+const coinIconPath = "million-coin-icon.jpg";
+const brandSymbol = document.querySelector(".brand-symbol");
+if (brandSymbol) {
+  const coinIcon = document.createElement("img");
+  coinIcon.src = coinIconPath;
+  coinIcon.alt = "";
+  coinIcon.width = 36;
+  coinIcon.height = 36;
+  coinIcon.decoding = "async";
+  coinIcon.style.cssText = "width:36px;height:36px;display:block;border-radius:50%;object-fit:cover;box-shadow:0 2px 10px rgba(0,0,0,.10)";
+  brandSymbol.replaceWith(coinIcon);
+}
+
+const dashBrand = document.querySelector(".dash-brand");
+if (dashBrand) {
+  dashBrand.textContent = "";
+  const dashCoin = document.createElement("img");
+  dashCoin.src = coinIconPath;
+  dashCoin.alt = "Million";
+  dashCoin.width = 29;
+  dashCoin.height = 29;
+  dashCoin.decoding = "async";
+  dashCoin.style.cssText = "width:29px;height:29px;display:block;border-radius:50%;object-fit:cover";
+  dashBrand.appendChild(dashCoin);
+}
+
+const favicon = document.createElement("link");
+favicon.rel = "icon";
+favicon.type = "image/jpeg";
+favicon.href = coinIconPath;
+document.head.appendChild(favicon);
+
+const appleTouchIcon = document.createElement("link");
+appleTouchIcon.rel = "apple-touch-icon";
+appleTouchIcon.href = coinIconPath;
+document.head.appendChild(appleTouchIcon);
